@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header a {
+  margin: 0 10px;
+  text-transform: uppercase;
+}
+
+.header div {
+  float: right;
+}

@@ -11,7 +11,7 @@ export const signup = (formProps, callback) => async dispatch => {
     localStorage.setItem("token", response.data.token);
     callback();
   } catch (e) {
-    dispatch({ type: AUTH_ERROR, payload: "Error! Email in use" });
+    dispatch({ type: AUTH_ERROR, payload: e.response.data.error });
   }
 };
 
