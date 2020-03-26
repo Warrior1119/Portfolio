@@ -26,17 +26,10 @@ class Header extends Component {
     return (
       <div className="max-w rounded overflow-hidden shadow-lg flex justify-between p-8 header">
         <Link to="/" className="text-blue-900 text-3xl">
-          Alfred Tabaco
+          Home
         </Link>
 
         <div className="text-blue-800 text-2x1 header">
-          <Link to="/experience">experience</Link>
-          <Link to="/education">education</Link>
-          <Link to="/clients">clients</Link>
-          <Link to="/skills">skills</Link>
-          <Link to="/expertise">expertise</Link>
-          <Link to="/contact">contact</Link>
-
           {this.renderLinks()}
         </div>
       </div>

@@ -11,7 +11,11 @@ export const signup = (formProps, callback) => async dispatch => {
     localStorage.setItem("token", response.data.token);
     callback();
   } catch (e) {
-    dispatch({ type: AUTH_ERROR, payload: e.response.data.error });
+    if (e.response) {
+      dispatch({ type: AUTH_ERROR, payload: e.response.data.error });
+    } else {
+      dispatch({ type: AUTH_ERROR, payload: "Connection refused" });
+    }
   }
 };
 
