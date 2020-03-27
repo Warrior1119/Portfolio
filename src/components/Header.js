@@ -25,12 +25,14 @@ class Header extends Component {
   render() {
     return (
       <div className="max-w rounded overflow-hidden shadow-lg flex justify-between p-8 header">
-        <Link to="/" className="text-blue-900 text-3xl">
-          Home
-        </Link>
+        <div className="container mx-auto">
+          <Link to="/" className="text-blue-900 text-3xl">
+            Home
+          </Link>
 
-        <div className="text-blue-800 text-2x1 header">
-          {this.renderLinks()}
+          <div className="text-blue-800 text-2x1 header">
+            {this.renderLinks()}
+          </div>
         </div>
       </div>
     );

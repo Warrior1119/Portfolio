@@ -1,5 +1,5 @@
 import axios from "axios";
-import { AUTH_USER, AUTH_ERROR } from "./types";
+import { AUTH_USER, AUTH_ERROR, UPDATE_TITLE, UPDATE_DESC } from "./types";
 
 export const signup = (formProps, callback) => async dispatch => {
   try {
@@ -41,3 +41,11 @@ export const signin = (formProps, callback) => async dispatch => {
     dispatch({ type: AUTH_ERROR, payload: "Invalid credentials" });
   }
 };
+
+export const updateTitle = (title) => {
+  return { type: UPDATE_TITLE, payload: title }
+}
+
+export const updateDescription = (desc) => {
+  return { type: UPDATE_DESC, payload: desc }
+}
