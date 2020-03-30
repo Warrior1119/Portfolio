@@ -1,16 +1,16 @@
-.header {
+.what_I_do {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 3rem;
 }
 
-.header ul {
+.what_I_do ul {
   flex-shrink: 0;
   list-style: none;
 }
 
-.header ul li {
+.what_I_do ul li {
   color: #0d0d3f;
   margin: 0 15px;
   font-size: 16px;
@@ -20,7 +20,7 @@
   text-transform: uppercase;
 }
 
-.header ul li::after {
+.what_I_do ul li::after {
   content: "";
   position: absolute;
   width: 4px;

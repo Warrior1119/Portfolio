@@ -4,8 +4,6 @@ import * as actions from "../../actions";
 import Lottie from "react-lottie";
 
 import "../../assets/main.css";
-import "../../assets/css/Intro.css";
-// import profile from "../../assets/json/premium.json";
 import linkedin from "../../assets/json/linkedin.json";
 import facebook from "../../assets/json/facebook.json";
 import twitter from "../../assets/json/twitter-lotti.json";
