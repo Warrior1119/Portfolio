@@ -84,32 +84,21 @@ class Intro extends Component {
                 Button
               </button>
             </div>
-            <div className="m-20 w-2/3">
-              <a>
-                <Lottie
-                  options={linkedinOption}
-                  isClickToPauseDisabled={true}
-                  height={50}
-                  width={50}
-                />
-              </a>
-              <a>
-                <Lottie
-                  options={facebookOption}
-                  isClickToPauseDisabled={true}
-                  height={50}
-                  width={50}
-                />
-              </a>
-              <a>
-                <Lottie
-                  options={twitterOption}
-                  isClickToPauseDisabled={true}
-                  height={50}
-                  width={50}
-                />
-              </a>
-            </div>
+            {/* <div className="m-20">
+              <Lottie
+                options={linkedinOption}
+                isClickToPauseDisabled={true}
+                height={50}
+                width={50}
+              />
+
+              <Lottie
+                options={facebookOption}
+                isClickToPauseDisabled={true}
+                height={50}
+                width={50}
+              />
+            </div> */}
           </div>
           <div className="w-1/3 h-12">
             <Lottie
