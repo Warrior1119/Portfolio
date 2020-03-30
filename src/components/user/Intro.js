@@ -4,7 +4,10 @@ import * as actions from "../../actions";
 import Lottie from "react-lottie";
 
 import "../../assets/main.css";
-import animationData from "../../assets/json/premium.json";
+import profile from "../../assets/json/premium.json";
+import linkedin from "../../assets/json/linkedin.json";
+import facebook from "../../assets/json/facebook.json";
+import twitter from "../../assets/json/twitter.json";
 
 class Intro extends Component {
   constructor(props) {
@@ -14,10 +17,37 @@ class Intro extends Component {
     };
   }
   render() {
-    const defaultOptions = {
+    const introOption = {
       loop: true,
       autoplay: true,
-      animationData: animationData,
+      animationData: profile,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+      }
+    };
+
+    const linkedinOption = {
+      loop: true,
+      autoplay: true,
+      animationData: linkedin,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+      }
+    };
+
+    const facebookOption = {
+      loop: true,
+      autoplay: true,
+      animationData: facebook,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+      }
+    };
+
+    const twitterOption = {
+      loop: true,
+      autoplay: true,
+      animationData: twitter,
       rendererSettings: {
         preserveAspectRatio: "xMidYMid slice"
       }
@@ -54,9 +84,40 @@ class Intro extends Component {
                 Button
               </button>
             </div>
+            <div className="m-20 w-2/3">
+              <a>
+                <Lottie
+                  options={linkedinOption}
+                  isClickToPauseDisabled={true}
+                  height={50}
+                  width={50}
+                />
+              </a>
+              <a>
+                <Lottie
+                  options={facebookOption}
+                  isClickToPauseDisabled={true}
+                  height={50}
+                  width={50}
+                />
+              </a>
+              <a>
+                <Lottie
+                  options={twitterOption}
+                  isClickToPauseDisabled={true}
+                  height={50}
+                  width={50}
+                />
+              </a>
+            </div>
           </div>
           <div className="w-1/3 h-12">
-            <Lottie options={defaultOptions} height={650} width={650} />
+            <Lottie
+              options={introOption}
+              isClickToPauseDisabled={true}
+              height={650}
+              width={650}
+            />
           </div>
         </div>
       </div>
