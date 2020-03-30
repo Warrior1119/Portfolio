@@ -5,7 +5,7 @@ import MainSkill from "./user/MainSkill";
 
 export default () => {
   return (
-    <div className="container mx-auto px-3">
+    <div className="container mx-auto px-3 h-screen">
       <Intro />
       <MainSkill />
     </div>

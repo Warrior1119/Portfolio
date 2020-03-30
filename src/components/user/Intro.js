@@ -4,27 +4,34 @@ import * as actions from "../../actions";
 import Lottie from "react-lottie";
 
 import "../../assets/main.css";
-import profile from "../../assets/json/premium.json";
+import "../../assets/css/Intro.css";
+// import profile from "../../assets/json/premium.json";
 import linkedin from "../../assets/json/linkedin.json";
 import facebook from "../../assets/json/facebook.json";
-import twitter from "../../assets/json/twitter.json";
+import twitter from "../../assets/json/twitter-lotti.json";
 
 class Intro extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "Senior Full-Stack Software Engineer"
+      title: "Senior Full-Stack Software Engineer",
+      height: props.height
     };
   }
+
+  componentWillMount() {
+    this.setState({ height: window.innerHeight + "px" });
+  }
+
   render() {
-    const introOption = {
-      loop: true,
-      autoplay: true,
-      animationData: profile,
-      rendererSettings: {
-        preserveAspectRatio: "xMidYMid slice"
-      }
-    };
+    // const introOption = {
+    //   loop: true,
+    //   autoplay: true,
+    //   animationData: profile,
+    //   rendererSettings: {
+    //     preserveAspectRatio: "xMidYMid slice"
+    //   }
+    // };
 
     const linkedinOption = {
       loop: true,
@@ -54,37 +61,19 @@ class Intro extends Component {
     };
 
     return (
-      <div className="container">
+      <div className="container" style={{ height: this.state.height }}>
         <div className="flex mb-4">
-          <div className="w-2/3 h-12 my-20">
+          <div className="w-2/3 my-20">
             <strong className="text-6xl">{this.props.title}</strong>
             <div className="w-2/3">
               <p className="text-2xl my-10"> {this.props.description} </p>
+              <p className="text-2xl my-5"> Love to see the impact of work </p>
+              <p className="text-2xl my-5">
+                {" "}
+                Adhere to high-quality lean engineering principles{" "}
+              </p>
             </div>
-
-            <div className="my-20 w-2/3">
-              <button
-                class="
-                    w-48 
-                    bg-red-600 
-                    hover:bg-transparent 
-                    text-white 
-                    hover:text-red-500 
-                    border border-white-500 
-                    hover:border-red-500  
-                    font-bold 
-                    py-2 
-                    px-4 
-                    rounded-full
-              "
-              >
-                Button
-              </button>
-              <button class="w-48 bg-transparent hover:bg-red-600 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded-full mx-10">
-                Button
-              </button>
-            </div>
-            {/* <div className="m-20">
+            <div className="w-1/6 my-20 flex">
               <Lottie
                 options={linkedinOption}
                 isClickToPauseDisabled={true}
@@ -98,14 +87,19 @@ class Intro extends Component {
                 height={50}
                 width={50}
               />
-            </div> */}
+
+              <Lottie
+                options={twitterOption}
+                isClickToPauseDisabled={true}
+                height={50}
+                width={50}
+              />
+            </div>
           </div>
-          <div className="w-1/3 h-12">
-            <Lottie
-              options={introOption}
-              isClickToPauseDisabled={true}
-              height={650}
-              width={650}
+          <div className="w-1/3 my-24">
+            <img
+              className="object-contain w-full border-8 border-gray-300 sm:object-cover lg:object-cover"
+              src={require("../../assets/image/1.jpg")}
             />
           </div>
         </div>
