@@ -9,7 +9,8 @@ class Skill extends Component {
       title: this.props.content.title,
       subtitle: this.props.content.subtitle,
       desc: this.props.content.desc,
-      color: this.props.content.color
+      color: this.props.content.color,
+      logo: this.props.content.logo
     };
   }
 
@@ -20,18 +21,31 @@ class Skill extends Component {
       "transition duration-700 ease-in-out transform hover:-translate-y-5 " +
       this.state.color;
 
+    const logo = require("../../assets/image/" + this.state.logo);
+
     return (
       <div className={style}>
         <div className="px-6 py-4">
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">{this.state.title}</div>
-            <div className="font-bold mb-2">{this.state.subtitle}</div>
-            <p className="text-base"> {this.state.desc}</p>
+            <div className="head_wrap">
+              <div className="logo_wrap">
+                <img src={logo} width="50" height="50" />
+              </div>
+              <div className="text_wrap">
+                <div className="font-bold text-2xl">{this.state.title}</div>
+                <div>{this.state.subtitle}</div>
+              </div>
+            </div>
+            <div className="text-base my-3"> {this.state.desc}</div>
           </div>
-          <div className="px-6 py-4">
-            <a href="#">
-              <strong> Learn more</strong>
-            </a>
+          <div className="px-6 py-4 elem_link">
+            <span className="font-bold underline">Learn more</span>
+            <img
+              src={require("../../assets/image/arrow.png")}
+              width="40"
+              height="40"
+              className="pl-2 transition duration-700 ease-in-out"
+            />
           </div>
         </div>
       </div>

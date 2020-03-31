@@ -13,7 +13,8 @@ class WhatDo extends Component {
         subtitle: "Front-end development",
         desc:
           "Join the likes of Instagram, WhatsApp and Facebook in creating a beautiful user interface that benefits from both speed and simplicity.",
-        color: "reactjs"
+        color: "reactjs",
+        logo: "react.png"
       },
 
       React_Native: {
@@ -21,7 +22,8 @@ class WhatDo extends Component {
         subtitle: "iOS & Android apps",
         desc:
           "Jump start your mobile app development with the low-cost approach that's captured the hearts of iOS and Android developers alike.",
-        color: "react-native"
+        color: "react-native",
+        logo: "react.png"
       },
 
       Node: {
@@ -29,7 +31,8 @@ class WhatDo extends Component {
         subtitle: "Backend development",
         desc:
           "Bring MVPs to life with a fast, scalable model that's lightweight and efficient. Perfect for real time, cross-device applications",
-        color: "nodejs"
+        color: "nodejs",
+        logo: "nodejs-icon.svg"
       },
 
       Cloud_Services: {
@@ -37,7 +40,8 @@ class WhatDo extends Component {
         subtitle: "serverless solutions",
         desc:
           "Stay ahead of the curve with a secure, scalable and flexible solution that reduces your overheads while guaranteeing high performance",
-        color: "cloud-services"
+        color: "cloud-services",
+        logo: "cloud.png"
       }
     };
   }
