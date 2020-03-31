@@ -15,15 +15,24 @@ class Skill extends Component {
 
   render() {
     const style =
-      "card rounded overflow-hidden shadow-lg h-64 " + this.state.color;
+      "card overflow-hidden cursor-pointer h-64 " +
+      "hover:shadow-2xl " +
+      "transition duration-700 ease-in-out transform hover:-translate-y-5 " +
+      this.state.color;
 
-    console.log("style....", style);
     return (
       <div className={style}>
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{this.state.title}</div>
-          <div className="font-bold mb-2">{this.state.subtitle}</div>
-          <p className="text-gray-700 text-base"> {this.state.desc}</p>
+          <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2">{this.state.title}</div>
+            <div className="font-bold mb-2">{this.state.subtitle}</div>
+            <p className="text-base"> {this.state.desc}</p>
+          </div>
+          <div className="px-6 py-4">
+            <a href="#">
+              <strong> Learn more</strong>
+            </a>
+          </div>
         </div>
       </div>
     );

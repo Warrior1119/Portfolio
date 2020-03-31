@@ -37,11 +37,6 @@
   font-size: 16px;
 }
 
-.skill-set {
-  display: flex;
-}
-
 .card {
-  width: 95%;
-  /* background-color: green; */
+  width: 49%;
 }

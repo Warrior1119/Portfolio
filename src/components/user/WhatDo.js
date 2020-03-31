@@ -13,14 +13,31 @@ class WhatDo extends Component {
         subtitle: "Front-end development",
         desc:
           "Join the likes of Instagram, WhatsApp and Facebook in creating a beautiful user interface that benefits from both speed and simplicity.",
-        color: "bg-reactjs"
+        color: "reactjs"
       },
+
       React_Native: {
         title: "React-Native",
         subtitle: "iOS & Android apps",
         desc:
           "Jump start your mobile app development with the low-cost approach that's captured the hearts of iOS and Android developers alike.",
-        color: "bg-blue-700"
+        color: "react-native"
+      },
+
+      Node: {
+        title: "Node.JS",
+        subtitle: "Backend development",
+        desc:
+          "Bring MVPs to life with a fast, scalable model that's lightweight and efficient. Perfect for real time, cross-device applications",
+        color: "nodejs"
+      },
+
+      Cloud_Services: {
+        title: "Cloud Services",
+        subtitle: "serverless solutions",
+        desc:
+          "Stay ahead of the curve with a secure, scalable and flexible solution that reduces your overheads while guaranteeing high performance",
+        color: "cloud-services"
       }
     };
   }
@@ -44,22 +61,18 @@ class WhatDo extends Component {
           </div>
         </div>
 
-        <div className="my-16 skill-set">
-          <a onClick={this.handleReactJSClick}>
+        <div className="my-16">
+          <div className="flex justify-between">
             <Skill content={this.state.React} />
-          </a>
-          <a onClick={this.handleReactJSClick}>
+
             <Skill content={this.state.React_Native} />
-          </a>
+          </div>
+          <div className="my-6 flex justify-between">
+            <Skill content={this.state.Node} />
+
+            <Skill content={this.state.Cloud_Services} />
+          </div>
         </div>
-        {/* <div className="my-16 skill-set">
-          <a onClick={this.handleReactJSClick}>
-            <Skill />
-          </a>
-          <a onClick={this.handleReactJSClick}>
-            <Skill />
-          </a>
-        </div> */}
       </div>
     );
   }

@@ -3,3 +3,19 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+.reactjs {
+  background-color: #a6d2ff;
+}
+
+.react-native {
+  background-color: #c6bafb;
+}
+
+.nodejs {
+  background-color: #a2ffd1;
+}
+
+.cloud-services {
+  background-color: #ffdfa6;
+}
