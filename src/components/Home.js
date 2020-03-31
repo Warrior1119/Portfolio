@@ -1,13 +1,13 @@
 import React from "react";
 import "../assets/main.css";
 import Intro from "./user/Intro";
-import MainSkill from "./user/MainSkill";
+import WhatDo from "./user/WhatDo";
 
 export default () => {
   return (
     <div className="container mx-auto px-3 h-screen">
       <Intro />
-      <MainSkill />
+      <WhatDo />
     </div>
   );
 };

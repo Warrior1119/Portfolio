@@ -40,3 +40,8 @@
 .skill-set {
   display: flex;
 }
+
+.card {
+  width: 95%;
+  /* background-color: green; */
+}

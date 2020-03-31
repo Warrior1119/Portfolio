@@ -2,9 +2,28 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../actions";
 import "../../assets/css/MainSkill.css";
-import ReactJS from "./MainSkills/ReactJS";
+import Skill from "./Skill";
 
-class MainSkill extends Component {
+class WhatDo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      React: {
+        title: "React.JS",
+        subtitle: "Front-end development",
+        desc:
+          "Join the likes of Instagram, WhatsApp and Facebook in creating a beautiful user interface that benefits from both speed and simplicity.",
+        color: "bg-reactjs"
+      },
+      React_Native: {
+        title: "React-Native",
+        subtitle: "iOS & Android apps",
+        desc:
+          "Jump start your mobile app development with the low-cost approach that's captured the hearts of iOS and Android developers alike.",
+        color: "bg-blue-700"
+      }
+    };
+  }
   handleReactJSClick = () => {
     console.log("React");
   };
@@ -25,25 +44,25 @@ class MainSkill extends Component {
           </div>
         </div>
 
-        <div className="my-16 skill-set flex">
-          <a onClick={this.handleReactJSClick}>
-            <ReactJS />
-          </a>
-          <a onClick={this.handleReactJSClick}>
-            <ReactJS />
-          </a>
-        </div>
         <div className="my-16 skill-set">
           <a onClick={this.handleReactJSClick}>
-            <ReactJS />
+            <Skill content={this.state.React} />
           </a>
           <a onClick={this.handleReactJSClick}>
-            <ReactJS />
+            <Skill content={this.state.React_Native} />
           </a>
         </div>
+        {/* <div className="my-16 skill-set">
+          <a onClick={this.handleReactJSClick}>
+            <Skill />
+          </a>
+          <a onClick={this.handleReactJSClick}>
+            <Skill />
+          </a>
+        </div> */}
       </div>
     );
   }
 }
 
-export default connect(null, actions)(MainSkill);
+export default connect(null, actions)(WhatDo);

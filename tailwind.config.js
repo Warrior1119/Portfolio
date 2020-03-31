@@ -1,6 +1,9 @@
 module.exports = {
   theme: {
-    extend: {}
+    extend: {},
+    backgroundColor: theme => ({
+      "bt-reactjs": "#a6d2ff"
+    })
   },
   variants: {},
   plugins: [require("tailwindcss"), require("autoprefixer")]
