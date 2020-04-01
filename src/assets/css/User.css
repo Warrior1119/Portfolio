@@ -1,16 +1,16 @@
-.what_I_do {
+.title-wrap {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
-.what_I_do ul {
+.title-wrap ul {
   flex-shrink: 0;
   list-style: none;
 }
 
-.what_I_do ul li {
+.title-wrap ul li {
   color: #0d0d3f;
   margin: 0 15px;
   font-size: 16px;
@@ -20,7 +20,7 @@
   text-transform: uppercase;
 }
 
-.what_I_do ul li::after {
+.title-wrap ul li::after {
   content: "";
   position: absolute;
   width: 4px;
@@ -34,7 +34,7 @@
 }
 
 .desc {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .card {

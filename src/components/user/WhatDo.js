@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../actions";
-import "../../assets/css/MainSkill.css";
+import "../../assets/css/User.css";
 import Skill from "./Skill";
 
 class WhatDo extends Component {
@@ -53,7 +53,7 @@ class WhatDo extends Component {
       <div className="container">
         <div className="w-full">
           <p className="text-xl">What I do</p>
-          <div className="what_I_do">
+          <div className="title-wrap">
             <div className="desc">
               I use the latest technologies to power your success.
             </div>
