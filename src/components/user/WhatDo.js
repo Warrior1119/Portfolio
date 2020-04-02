@@ -45,9 +45,6 @@ class WhatDo extends Component {
       }
     };
   }
-  handleReactJSClick = () => {
-    console.log("React");
-  };
   render() {
     return (
       <div className="container">

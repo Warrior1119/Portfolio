@@ -22,6 +22,21 @@ class Skill extends Component {
     });
   };
 
+  handleClick = () => {
+    var prefix;
+    if (this.state.title == "React.JS") {
+      prefix = "react-js-development";
+      // this.props.history.push(prefix);
+    } else if (this.state.title == "React-Native") {
+      prefix = "react-native-development";
+    } else if (this.state.title == "Node.JS") {
+      prefix = "node-js-development";
+    } else {
+      prefix = "cloud-services-development";
+    }
+    console.log("prefix...", prefix);
+  };
+
   render() {
     const style =
       "card overflow-hidden cursor-pointer h-64 " +
@@ -41,6 +56,7 @@ class Skill extends Component {
     return (
       <div
         className={style}
+        onClick={this.handleClick}
         onMouseEnter={this.toggleHover}
         onMouseLeave={this.toggleHover}
       >
