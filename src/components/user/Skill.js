@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+
 import "../../assets/css/User.css";
+import { Redirect } from "react-router-dom";
 
 class Skill extends Component {
   constructor(props) {
@@ -11,30 +13,45 @@ class Skill extends Component {
       desc: this.props.content.desc,
       color: this.props.content.color,
       logo: this.props.content.logo,
-      hover: false
+      hover: false,
+      redirectUrl: "",
+      redirect: false,
     };
   }
 
   toggleHover = () => {
     console.log("over");
     this.setState({
-      hover: !this.state.hover
+      hover: !this.state.hover,
     });
   };
 
   handleClick = () => {
-    var prefix;
-    if (this.state.title == "React.JS") {
-      prefix = "react-js-development";
-      // this.props.history.push(prefix);
-    } else if (this.state.title == "React-Native") {
-      prefix = "react-native-development";
-    } else if (this.state.title == "Node.JS") {
-      prefix = "node-js-development";
+    let prefix;
+
+    if (this.state.title === "React.JS") {
+      this.setState({
+        redirect: true,
+        redirectUrl: "react-js-development",
+      });
+    } else if (this.state.title === "React-Native") {
+      this.setState({
+        redirect: true,
+        redirectUrl: "react-native-development",
+      });
+    } else if (this.state.title === "Node.JS") {
+      this.setState({
+        redirect: true,
+        redirectUrl: "node-js-development",
+      });
     } else {
-      prefix = "cloud-services-development";
+      this.setState({
+        redirect: true,
+        redirectUrl: "cloud-services",
+      });
     }
-    console.log("prefix...", prefix);
+
+    console.log("prefix..........", prefix);
   };
 
   render() {
@@ -46,11 +63,15 @@ class Skill extends Component {
 
     const logo = require("../../assets/image/" + this.state.logo);
 
-    var arrorStyle;
+    let arrorStyle;
     if (this.state.hover) {
       arrorStyle = { display: "block" };
     } else {
       arrorStyle = { display: "none" };
+    }
+
+    if (this.state.redirect) {
+      return <Redirect to={this.state.redirectUrl} />;
     }
 
     return (
@@ -64,7 +85,7 @@ class Skill extends Component {
           <div className="px-6 py-4">
             <div className="head_wrap">
               <div className="logo_wrap">
-                <img src={logo} width="50" height="50" />
+                <img src={logo} width="50" height="50" alt="" />
               </div>
               <div className="text_wrap">
                 <div className="font-bold text-2xl">{this.state.title}</div>
@@ -81,6 +102,7 @@ class Skill extends Component {
               height="40"
               className="pl-2"
               style={arrorStyle}
+              alt=""
             />
           </div>
         </div>
