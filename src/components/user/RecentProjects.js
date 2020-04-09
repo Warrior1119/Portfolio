@@ -3,9 +3,11 @@ import "../../assets/css/User.css";
 
 class RecentProjects extends Component {
   render() {
-    const imgUrl = "../../assets/image/1.png";
+    const imgUrl = require("../../assets/image/1.png");
     const backgroundstyle = {
-      backgroundImage: "url(" + imgUrl + ")",
+      width: "300px",
+      height: "100%",
+      backgroundImage: `url(${require("../../assets/image/1.png")})`,
     };
     return (
       <div className="container">
@@ -14,16 +16,13 @@ class RecentProjects extends Component {
           <strong> View all case studies > </strong>
         </div>
 
-        <div className="max-w-sm w-full lg:max-w-full lg:flex">
-          <div
-            className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-            style={backgroundstyle}
-            title="Woman holding a mug"
-          ></div>
-          <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+        <div className="max-w-sm w-full lg:max-w-full lg:flex my-10 overflow-hidden shadow-2xl recentProject">
+          <div className="lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden recentProject-card"></div>
+
+          <div className="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
             <div className="mb-8">
               <div className="text-gray-900 font-bold text-xl mb-2">
-                Can coffee make you a better developer?
+                Brandnooz.de
               </div>
               <p className="text-gray-700 text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -32,17 +31,14 @@ class RecentProjects extends Component {
               </p>
             </div>
             <div className="flex items-center">
-              <img
-                className="w-10 h-10 rounded-full mr-4"
-                src={require("../../assets/image/1.png")}
-                alt=""
-              />
               <div className="text-sm">
                 <p className="text-gray-900 leading-none">Jonathan Reinink</p>
                 <p className="text-gray-600">Aug 18</p>
               </div>
             </div>
           </div>
+
+          <div className="w-full flex">abc</div>
         </div>
 
         <div></div>

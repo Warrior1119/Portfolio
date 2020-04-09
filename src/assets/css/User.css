@@ -55,3 +55,14 @@
   display: flex;
   align-items: center;
 }
+
+.recentProject {
+  height: 600px;
+}
+
+.recentProject-card {
+  width: 60%;
+  background-image: url(../image/1.png);
+  background-size: 100% 80%;
+  background-repeat: no-repeat;
+}
